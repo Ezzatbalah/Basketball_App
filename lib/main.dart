@@ -1,21 +1,22 @@
+// ignore_for_file: sort_child_properties_last
+
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(Basketball_app());
+  runApp(const BasketBall());
 }
 
 // ignore: must_be_immutable
-class Basketball_app extends StatefulWidget {
-  Basketball_app({super.key});
+class BasketBall extends StatefulWidget {
+  const BasketBall({super.key});
   @override
-  State<Basketball_app> createState() => _Basketball_appState();
+  State<BasketBall> createState() => _BasketBallState();
 }
 
-class _Basketball_appState extends State
-<Basketball_app> {
-  int TeamA = 0;
-
-  int TeamB = 0;
+class _BasketBallState extends State
+<BasketBall> {
+  int teamA = 0;
+  int teamB = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -41,14 +42,14 @@ class _Basketball_appState extends State
                       ),
                     ),
                     Text(
-                      '$TeamA',
+                      '$teamA',
                       style: const TextStyle(
                         fontSize: 170,
                       ),
                     ),
                     ElevatedButton(
                       onPressed: () {
-                        TeamA++;
+                        teamA++;
                         setState(() {});
                       },
                       child: const Text(
@@ -59,14 +60,14 @@ class _Basketball_appState extends State
                         ),
                       ),
                       style: ElevatedButton.styleFrom(
-                          primary: Colors.orange, minimumSize: const Size(150, 50)),
+                          backgroundColor: Colors.orange, minimumSize: const Size(150, 50)),
                     ),
                     const SizedBox(
                       height: 14,
                     ),
                     ElevatedButton(
                       onPressed: () {
-                        TeamA += 2;
+                        teamA += 2;
                         setState(() {});
                       },
                       child: const Text(
@@ -74,7 +75,7 @@ class _Basketball_appState extends State
                         style: TextStyle(color: Colors.black, fontSize: 18),
                       ),
                       style: ElevatedButton.styleFrom(
-                        primary: Colors.orange,
+                        backgroundColor: Colors.orange,
                         minimumSize: const Size(150, 50),
                       ),
                     ),
@@ -83,7 +84,7 @@ class _Basketball_appState extends State
                     ),
                     ElevatedButton(
                       onPressed: () {
-                        TeamA += 3;
+                        teamA += 3;
                         setState(() {});
                       },
                       child: const Text(
@@ -94,7 +95,7 @@ class _Basketball_appState extends State
                         ),
                       ),
                       style: ElevatedButton.styleFrom(
-                        primary: Colors.orange,
+                        backgroundColor: Colors.orange,
                         minimumSize: const Size(150, 50),
                       ),
                     ),
@@ -118,14 +119,14 @@ class _Basketball_appState extends State
                       ),
                     ),
                     Text(
-                      '$TeamB',
+                      '$teamB',
                       style: const TextStyle(
                         fontSize: 170,
                       ),
                     ),
                     ElevatedButton(
                       onPressed: () {
-                        TeamB++;
+                        teamB++;
                         setState(() {});
                       },
                       child: const Text(
@@ -136,14 +137,14 @@ class _Basketball_appState extends State
                         ),
                       ),
                       style: ElevatedButton.styleFrom(
-                          primary: Colors.orange, minimumSize: const Size(150, 50)),
+                          backgroundColor: Colors.orange, minimumSize: const Size(150, 50)),
                     ),
                     const SizedBox(
                       height: 14,
                     ),
                     ElevatedButton(
                       onPressed: () {
-                        TeamB += 2;
+                        teamB += 2;
                         setState(() {});
                       },
                       child: const Text(
@@ -151,7 +152,7 @@ class _Basketball_appState extends State
                         style: TextStyle(color: Colors.black, fontSize: 18),
                       ),
                       style: ElevatedButton.styleFrom(
-                        primary: Colors.orange,
+                        backgroundColor: Colors.orange,
                         minimumSize: const Size(150, 50),
                       ),
                     ),
@@ -160,7 +161,7 @@ class _Basketball_appState extends State
                     ),
                     ElevatedButton(
                       onPressed: () {
-                        TeamB += 3;
+                        teamB += 3;
                         setState(() {});
                       },
                       child: const Text(
@@ -171,7 +172,7 @@ class _Basketball_appState extends State
                         ),
                       ),
                       style: ElevatedButton.styleFrom(
-                        primary: Colors.orange,
+                        backgroundColor: Colors.orange,
                         minimumSize: const Size(150, 50),
                       ),
                     ),
@@ -183,8 +184,8 @@ class _Basketball_appState extends State
               height: 42,
               child: ElevatedButton(
                 onPressed: () {
-                  TeamA = 0;
-                  TeamB = 0;
+                  teamA = 0;
+                  teamB = 0;
                   setState(() {
                     
                   });
@@ -197,7 +198,7 @@ class _Basketball_appState extends State
                   ),
                 ),
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.orange,
+                  backgroundColor: Colors.orange,
                   minimumSize: const Size(150, 50),
                 ),
               ),
